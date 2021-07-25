@@ -1,0 +1,271 @@
+:root {
+  /* Color */
+  --black-color: #140a00;
+  --white-color: #fff;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* Size */
+  --padding: 12px;
+  --avatar-size: 36px;
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro";
+}
+
+/* 모든 리스트의 동그라미 모양 없앰*/
+ul {
+  list-style: none;
+}
+
+/* 버튼, 버튼클릭 시 나는 액션들 없애주기, 우리가 커스터마이징 위함*/
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/*Header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+header .logo {
+  font-size: (var(--font-large));
+}
+
+header .logo .fa-youtube {
+  color: var(--red-color);
+}
+
+header .icons .fa-search {
+  margin-right: var(--padding);
+}
+
+/* heaher~ 어쩌구 너무 많음 ->걍 묶어서 가능함!!
+header {
+    .logo {
+    }
+    .icons {
+    }
+    
+    */
+
+.player {
+  position: sticky; /*스크롤했을 때 동영상이 고정되게*/
+  top: 0; /*어디에 고정되어 있을까?*/
+  text-align: center; /*창 키웠을 때 동영상이 가운데로 감*/
+  background-color: var(--black-color);
+}
+
+.player video {
+  width: 100%;
+  height: 100%; /*사이즈 줄일 때마다 조정됨 ;반응형*/
+  max-width: 1000px;
+}
+
+body > .infoAndUpnext .info {
+  padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+  margin-right: var(--padding);
+}
+
+.info .metadata .TitleandButton {
+  display: flex;
+}
+
+.info .metadata .TitleandButton .title {
+  font-size: var(--font-medium);
+  margin-right: var(--padding);
+}
+
+/*클릭했을 때 제목 짤린 2줄 다 표시할 수 있게*/
+.info .metadata .TitleandButton .title.clamp {
+  /*2줄로 유지하기*/
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.info .metadata .TitleandButton .moreBtn {
+  background-color: var(--white-color);
+  height: 100%;
+  transition: transform 300ms ease-in-out; /*돌아가는 애니메이션*/
+}
+
+.info .metadata .TitleandButton .moreBtn.clicked {
+  transform: rotate(180deg); /*누르면 세모 뒤집어짐*/
+}
+
+.info .views {
+  color: var(--grey-dark-color);
+  font-size: var(--font-small);
+}
+
+.info .actions {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--padding) 0; /* 공간 위 아래 패딩, 양옆 없음*/
+}
+
+.info .actions button {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+/* class name 말고 i 적어도 되야하는데 왜 안되니 ㅜ*/
+/* 액션 아이콘이랑 글자 가운데 정렬*/
+.info .actions button .fa-flag,
+.fa-plus,
+.fa-share,
+.fa-thumbs-up,
+.fa-thumbs-down {
+  margin: 0 auto;
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: 16px;
+}
+
+.actions button .fa-thumbs-up {
+  color: var(--blue-color);
+}
+
+.channel {
+  display: flex;
+  justify-content: space-between;
+  /*구분선 넣어주기*/
+  padding: var(--padding);
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.channel .metadata {
+  display: flex;
+  align-items: center; /*인포박스랑 사진이랑 가운데로 맞춰줌*/
+}
+
+.channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--padding);
+}
+
+.channel .metadata img {
+  width: var(--avatar-size);
+  max-height: var(--avatar-size);
+  border-radius: 50%; /*사진 원형으로 만들기*/
+}
+
+.channel .metadata .name {
+  font-size: var(--font-medium);
+}
+
+.channel .metadata .subscribers {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.channel .subscribe {
+  background-color: transparent; /*배경 없애기*/
+  text-transform: uppercase; /*대문자*/
+  font-size: var(--font-medium);
+  color: var(--red-color);
+}
+
+.UpNext {
+  padding: 0 var(--padding);
+}
+
+.UpNext > .title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-bottom: 6px;
+}
+
+.UpNext .item {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+.UpNext .item img {
+  width: 35%;
+  /*늘어나고 1 줄어들 때 1 지정 , 기본 35 적용*/
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+.UpNext .item .img img {
+  width: 100%;
+}
+
+.UpNext .item .info {
+  flex: 1 1 60%;
+}
+
+.UpNext .item .moreBtn {
+  flex: 1 1 5%;
+  background-color: transparent;
+}
+
+.UpNext .item .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.UpNext .item .info .title {
+  font-size: var(--font-small);
+}
+
+.UpNext .item .info .name,
+.UpNext .item .info .views {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
+}
+
+.UpNext .item .moreBtn {
+  display: flex;
+  padding-top: 3px;
+  padding-left: var(--padding);
+}
+
+.infoAndUpnext {
+  display: flex;
+  flex-direction: column;
+}
+
+/*너무 커지면 업넥스트 옆으로 오게 조정*/
+@media screen and (min-width: 768px) {
+  .infoAndUpnext {
+    flex-direction: row;
+    margin: var(--padding) 0;
+  }
+}

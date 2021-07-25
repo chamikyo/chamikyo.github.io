@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Mobile</title>
+
+ <!--자바스크립트 연결-->
+    <link rel="stylesheet" href="style.css" /> <!--css 연결-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <span class="title" href="">Youtube</span>
+        </div> 
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+    </header>
+
+    <!-- Video Player -->
+    <section class="player">
+        <video controls src="video/차미교-디자인중간과제.mp4"></video>
+    </section>
+
+    <div class="infoAndUpnext">
+        <!-- Video Info -->
+        <section class="info">
+            <!--MetaData-->
+            <div class="metadata">
+                <ul class="hashtags">
+                    <li>#DreamCoring</li>
+                    <li>#DreamCorder</li>
+                    <li>#Elie</li>
+                </ul>
+                <div class="TitleandButton">
+                    <span class="title clamp">
+                        차미교 7월 넷째주 프론트엔드 공부 클론 코딩 유튜브 모바일 웹사이트 따라만들기 재밌당 | 프론트엔드 개발자 입문편: HTML, CSS JavaScript
+                        | 영상은 디자인공학드로잉 중간 발표 동영상!</b>
+                    </span>
+                    <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+                </div>
+                <span class="views">1M view 1 month ago</span>
+
+            </div>
+            <!--Actions-->
+            <ul class="actions">
+                <li>
+                    <button><span class="acive fas fa-thumbs-up"></span>
+                        <div>1K</div>
+                    </button>
+                </li>
+                <li>
+                    <button><span class="fas fa-thumbs-down"></span>
+                        <div>0</div>
+                    </button>
+                </li>
+                <li>
+                    <button><span class="fas fa-share"></span>
+                        <div>Share</div>
+                    </button>
+                </li>
+                <li>
+                    <button><span class="fas fa-plus"></span>
+                        <div>Save</div>
+                    </button>
+                </li>
+                <li><button><span class="fas fa-flag"></span>
+                        <div>Report</div>
+                    </button>
+                </li>
+            </ul>
+            <!--Channel Description-->
+            <div class="channel">
+                <div class="metadata">
+                    <img src="image/me.JPG" alt="">
+                    <div class="info">
+                        <span class="name">Endless 차미교</span>
+                        <span class="subscribers">1M subscribers</span>
+                    </div>
+                </div>
+                <button class="subscribe"><strong>subscribe</strong></button>
+            </div>
+        </section>
+
+        <section class="UpNext">
+            <span class="title">Up next</span>
+            <ul>
+                <li class="item">
+                    <img src="image/달1.jpeg" alt="">
+                    <span class="info">
+                        <span class="title clamp">
+                            7월 24일 토요일 점심 열심히 공부하는 나, 어쩌면 조금 멋질지도?
+                            | 매일 일찍 일어나는 나 꽤 훌륭합니다
+                        </span>
+                        <span class="name">Endless 차미교</span>
+                        <span class="views">82K views</span>
+                    </span>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+
+                <li class="item">
+                    <img src="image/달2.jpeg" alt="">
+                    <span class="info">
+                        <span class="title">
+                            7월 23일 공부하고 지승이랑 고기 먹고 또 카페를 간 나
+                            | 돈이 있으면 또 아무 생각 없이 쳐 쓰죠?
+                        </span>
+                        <span class="name">Endless 차미교</span>
+                        <span class="views">70K views</span>
+                    </span>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+
+                <li class="item">
+                    <img src="image/달3.jpeg" alt="">
+                    <span class="info">
+                        <span class="title">
+                            7월 22일 갑자기 당근에 올린 물건들이 다 팔려서 굉장히 행복 했음
+                            | 11만원 ㅋ 헤드셋, 설빙 기프티콘
+                        </span>
+                        <span class="name">Endless 차미교</span>
+                        <span class="views">82 views</span>
+                    </span>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+
+</html>
